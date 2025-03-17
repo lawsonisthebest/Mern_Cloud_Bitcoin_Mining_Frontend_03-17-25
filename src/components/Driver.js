@@ -13,7 +13,7 @@ const Driver = (props) => {
     const updateDrivers = async() =>{
         const token = localStorage.getItem('token');
         axios
-            .patch("http://localhost:4000/api/drivers", { incrementAmount: props.power },
+            .patch("https://mern-cloud-bitcoin-mining-backend.onrender.com/api/drivers", { incrementAmount: props.power },
             {
                 headers: {
                 'Authorization': `Bearer ${token}`, // Send token in the Authorization header
