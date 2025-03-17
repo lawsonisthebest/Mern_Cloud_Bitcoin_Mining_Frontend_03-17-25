@@ -17,7 +17,7 @@ const Wallet = () => {
                 return;
               }
               try {
-                const res = await axios.get("http://localhost:4000/api/", {
+                const res = await axios.get("https://mern-cloud-bitcoin-mining-backend.onrender.com/api/", {
                   headers: {
                     'Authorization': `Bearer ${token}`, // Send token as Authorization header
                   }

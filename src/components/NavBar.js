@@ -18,7 +18,7 @@ const NavBar = () => {
 
       try {
         // Fetch Drivers
-        const driversRes = await axios.get("http://localhost:4000/api/drivers", {
+        const driversRes = await axios.get("https://mern-cloud-bitcoin-mining-backend.onrender.com/api/drivers", {
           headers: {
             'Authorization': `Bearer ${token}`, // Send token in the Authorization header
           }
@@ -31,7 +31,7 @@ const NavBar = () => {
 
       try {
         // Fetch Bitcoin balance
-        const bitcoinRes = await axios.get("http://localhost:4000/api/", {
+        const bitcoinRes = await axios.get("https://mern-cloud-bitcoin-mining-backend.onrender.com/api/", {
           headers: {
             'Authorization': `Bearer ${token}`, // Send token in the Authorization header
           }
@@ -51,7 +51,7 @@ const NavBar = () => {
       const token = localStorage.getItem('token');
       if (!token) return; // Exit if no token
 
-      axios.patch("http://localhost:4000/api/", { incrementAmount: drivers }, {
+      axios.patch("https://mern-cloud-bitcoin-mining-backend.onrender.com/api/", { incrementAmount: drivers }, {
         headers: {
           'Authorization': `Bearer ${token}`, // Send token in the Authorization header
         }
